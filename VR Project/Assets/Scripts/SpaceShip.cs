@@ -38,6 +38,12 @@ public class SpaceShip : MonoBehaviour
                     chosenPlanet = "Jupiter";
                     PlanetChoice.SetActive(true);
                 }
+                else if (hit.transform.name == "Saturn")
+                {
+                    Debug.Log("Travelling to the planet " + hit.transform.name);
+                    chosenPlanet = "Saturn";
+                    PlanetChoice.SetActive(true);
+                }
                 else
                 {
                     Debug.Log("This isn't a Planet");

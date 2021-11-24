@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
             {
                 if (hit.transform.name == "SpaceShip")
                 {
+                    
                     ReturnSpaceship.SetActive(true);
                     returnText.text = "Return to the spaceship ?";
                 }

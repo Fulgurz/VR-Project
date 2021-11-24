@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NewBehaviourScript : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
 
@@ -13,12 +13,12 @@ public class NewBehaviourScript : MonoBehaviour
         
     }
 
-    void StartGame()
+    public void GoSpaceship()
     {
         SceneManager.LoadScene("SpaceShip");
     }
 
-    void ReturnMenu()
+    public void ReturnMenu()
     {
         SceneManager.LoadScene("Menu");
     }
