@@ -26,22 +26,12 @@ public class SpaceShip : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.transform.name == "Mars")
+                if (hit.transform.name == "Mercury" || hit.transform.name == "Venus" || hit.transform.name == "Moon"
+                    || hit.transform.name == "Earth" || hit.transform.name == "Mars" || hit.transform.name == "Jupiter"
+                    || hit.transform.name == "Saturn" || hit.transform.name == "Uranus" || hit.transform.name == "Neptune")
                 {
                     Debug.Log("Travelling to the planet " + hit.transform.name);
-                    chosenPlanet = "Mars";
-                    PlanetChoice.SetActive(true);
-                }
-                else if (hit.transform.name == "Jupiter")
-                {
-                    Debug.Log("Travelling to the planet " + hit.transform.name);
-                    chosenPlanet = "Jupiter";
-                    PlanetChoice.SetActive(true);
-                }
-                else if (hit.transform.name == "Saturn")
-                {
-                    Debug.Log("Travelling to the planet " + hit.transform.name);
-                    chosenPlanet = "Saturn";
+                    chosenPlanet = hit.transform.name;
                     PlanetChoice.SetActive(true);
                 }
                 else
@@ -53,6 +43,7 @@ public class SpaceShip : MonoBehaviour
         }
         TextChosen.text = "Travel to " + chosenPlanet + " ?";
 
+    
     }
     public void TravelPlanet()
     {

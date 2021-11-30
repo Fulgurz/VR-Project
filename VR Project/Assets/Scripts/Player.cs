@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
 
     public Text returnText;
     public GameObject ReturnSpaceship;
+    public GameObject GroundInfoPanel;
+
 
     void Update()
     {
@@ -35,15 +37,22 @@ public class Player : MonoBehaviour
                     ReturnSpaceship.SetActive(true);
                     returnText.text = "Return to the spaceship ?";
                 }
+                else if (hit.transform.name == "Rock")
+                {
+                    Debug.Log("This is a rock");
+                    ReturnSpaceship.SetActive(false);
+                    GroundInfoPanel.SetActive(true);
+                }
                 else
                 {
-                    ReturnSpaceship.SetActive(false);
+                    //ReturnSpaceship.SetActive(false);
+                    GroundInfoPanel.SetActive(false);
                 }
             }
         }
         if (Input.GetKeyDown("space"))
         {
-            SceneManager.LoadScene("SpaceShip");
+            //SceneManager.LoadScene("SpaceShip");
         }
     }
 
