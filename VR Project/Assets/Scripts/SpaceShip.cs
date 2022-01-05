@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class SpaceShip : MonoBehaviour
 {
-    private string chosenPlanet;
-    public Text TextChosen;
+    public static string chosenPlanet;
+    public TextMeshProUGUI TextChosen;
     public GameObject PlanetChoice;
 
     // Start is called before the first frame update
@@ -47,7 +48,15 @@ public class SpaceShip : MonoBehaviour
     }
     public void TravelPlanet()
     {
-        SceneManager.LoadScene(chosenPlanet);
+        if (chosenPlanet=="Jupiter" || chosenPlanet == "Saturn" || chosenPlanet == "Uranus" || chosenPlanet == "Neptune")
+        {
+            SceneManager.LoadScene("GiantPlanets");
+        }
+        else
+        {
+            SceneManager.LoadScene(chosenPlanet);
+        }
+      
     }
 }
 
