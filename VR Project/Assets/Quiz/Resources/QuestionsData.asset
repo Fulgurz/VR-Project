@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f611d797432e3f846885b2b12fde5f35, type: 3}
+  m_Name: QuestionsData
+  m_EditorClassIdentifier: 
+  categoryName: Start !
+  questions:
+  - questionInfo: Which one of these planets is a gaz planet ?
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Mars
+    - Earth
+    - Jupiter
+    - Mercury
+    correctAns: Jupiter
+  - questionInfo: How much time does it take to Saturn to have one sun revolution
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - 29,5 years
+    - 29,5 months
+    - 29,5 days
+    - 29,5 weeks
+    correctAns: 29,5 years
+  - questionInfo: What is mercury's average temperature during the day
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - "207 \xB0C"
+    - "438\xB0C"
+    - "-150\xB0C"
+    - "20\xB0C"
+    correctAns: "438\xB0C"
+  - questionInfo: How long is Jupiter's diameter compared to Earth's one ?
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - 11 times the diameter of Earth
+    - 2.5 times the diameter of Earth
+    - 24 times the diameter of Earth
+    - 8 times the diameter of Earth
+    correctAns: 11 times the diameter of Earth
+  - questionInfo: Which planet was discovered mathematically and not by observation
+      ?
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Mars
+    - Neptun
+    - 'Mercury '
+    - Uranus
+    correctAns: Neptun
+  - questionInfo: What are the main components of Uranus' geology ?
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Hydrogen, Helium, Rocks
+    - Hydrogen, Helium,Water
+    - Rocks, Helium
+    - Voclanos, Rocks, Water
+    correctAns: Hydrogen, Helium,Water
+  - questionInfo: Guess the planet?
+    questionType: 1
+    questionImage: {fileID: 21300000, guid: c71686d64c1e3445d8b697edfb75e043, type: 3}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Uranus
+    - Mercury
+    - Venus
+    - Mars
+    correctAns: Venus
+  - questionInfo: Which planet has the biggest volcano discovered in the solar system
+      ?
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Mercury
+    - Mars
+    - Earth
+    - Jupiter
+    correctAns: Mars
+  - questionInfo: Which planet has the biggest volcano discovered in the solar system
+      ?
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Mercury
+    - Mars
+    - Earth
+    - Jupiter
+    correctAns: Mars
+  - questionInfo: How many of Saturn's moon have water ?
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - 0
+    - 1
+    - 2
+    - 3
+    correctAns: 2
+  - questionInfo: How many moons does  Saturn have ?
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - 82
+    - 54
+    - 1
+    - 12
+    correctAns: 82

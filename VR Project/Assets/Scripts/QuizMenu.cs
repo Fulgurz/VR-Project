@@ -2,17 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-public class MainMenu : MonoBehaviour
+public class QuizMenu : MonoBehaviour
 {
     public void PlayGame()
     {
         SceneManager.LoadScene("SpaceShip");
-    }
-
-    public void PlayQuizz()
-    {
-        SceneManager.LoadScene("QuizScene");
     }
 
     public void QuitGame()
