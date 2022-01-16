@@ -104,18 +104,6 @@ MonoBehaviour:
     - Earth
     - Jupiter
     correctAns: Mars
-  - questionInfo: Which planet has the biggest volcano discovered in the solar system
-      ?
-    questionType: 0
-    questionImage: {fileID: 0}
-    audioClip: {fileID: 0}
-    videoClip: {fileID: 0}
-    options:
-    - Mercury
-    - Mars
-    - Earth
-    - Jupiter
-    correctAns: Mars
   - questionInfo: How many of Saturn's moon have water ?
     questionType: 0
     questionImage: {fileID: 0}
