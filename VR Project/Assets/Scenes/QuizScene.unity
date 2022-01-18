@@ -3281,7 +3281,7 @@ MonoBehaviour:
   quizGameUI: {fileID: 2070216836}
   quizDataList:
   - {fileID: 11400000, guid: 1b526a90754517b45a4f3dfa7ee9bebd, type: 2}
-  timeInSeconds: 60
+  timeInSeconds: 120
 --- !u!1 &1991697069
 GameObject:
   m_ObjectHideFlags: 0

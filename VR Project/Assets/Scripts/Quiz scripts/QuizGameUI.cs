@@ -7,24 +7,24 @@ using UnityEngine.SceneManagement;
 public class QuizGameUI : MonoBehaviour
 {
 #pragma warning disable 649
-    [SerializeField] private QuizManager quizManager;               //ref to the QuizManager script
+    [SerializeField] private QuizManager quizManager;               //QuizManager script
     [SerializeField] private CategoryBtnScript categoryBtnPrefab;
     [SerializeField] private GameObject scrollHolder;
     [SerializeField] private Text scoreText, timerText;
     [SerializeField] private List<Image> lifeImageList;
     [SerializeField] private GameObject gameOverPanel, mainMenu, gamePanel;
     [SerializeField] private Color correctCol, wrongCol, normalCol; //color of buttons
-    [SerializeField] private Image questionImg;                     //image component to show image
-    [SerializeField] private Text questionInfoText;                 //text to show question
-    [SerializeField] private List<Button> options;                  //options button reference
+    [SerializeField] private Image questionImg;                     //image component 
+    [SerializeField] private Text questionInfoText;                 //text 
+    [SerializeField] private List<Button> options;                  //options button
 #pragma warning restore 649
 
     private Question question;          //store current question data
     private bool answered = false;      //bool to keep track if answered or not
 
-    public Text TimerText { get => timerText; }                     //getter
-    public Text ScoreText { get => scoreText; }                     //getter
-    public GameObject GameOverPanel { get => gameOverPanel; }                     //getter
+    public Text TimerText { get => timerText; }                     
+    public Text ScoreText { get => scoreText; }                    
+    public GameObject GameOverPanel { get => gameOverPanel; }
 
     private void Start()
     {
@@ -38,10 +38,7 @@ public class QuizGameUI : MonoBehaviour
         CreateCategoryButtons();
 
     }
-    /// <summary>
     /// Method which populate the question on the screen
-    /// </summary>
-    /// <param name="question"></param>
     public void SetQuestion(Question question)
     {
         //set the question
@@ -54,9 +51,9 @@ public class QuizGameUI : MonoBehaviour
                 break;
             case QuestionType.IMAGE:
                 questionImg.transform.parent.gameObject.SetActive(true);    //activate image holder
-                questionImg.transform.gameObject.SetActive(true);           //activate questionImg
+                questionImg.transform.gameObject.SetActive(true);           //activate question image
 
-                questionImg.sprite = question.questionImage;                //set the image sprite
+                questionImg.sprite = question.questionImage;                //set the image 
                 break;
             
         }
@@ -84,10 +81,7 @@ public class QuizGameUI : MonoBehaviour
         lifeImageList[remainingLife].color = Color.red;
     }
 
-    /// <summary>
     /// Method assigned to the buttons
-    /// </summary>
-    /// <param name="btn">ref to the button object</param>
     void OnClick(Button btn)
     {
         if (quizManager.GameStatus == GameStatus.PLAYING)
@@ -116,12 +110,11 @@ public class QuizGameUI : MonoBehaviour
         }
     }
 
-    /// <summary>
     /// Method to create Category Buttons dynamically
-    /// </summary>
     void CreateCategoryButtons()
     {
         //we loop through all the available catgories in our QuizManager
+        //we ultimately decided to only have on category in our quizz but we decided to keep this method if we want to add more later on
         for (int i = 0; i < quizManager.QuizData.Count; i++)
         {
             //Create new CategoryBtn
@@ -142,7 +135,7 @@ public class QuizGameUI : MonoBehaviour
         gamePanel.SetActive(true);              //activate game panel
     }
 
-    //this give blink effect [if needed use or dont use]
+    //this give blink effect
     IEnumerator BlinkImg(Image img)
     {
         for (int i = 0; i < 2; i++)

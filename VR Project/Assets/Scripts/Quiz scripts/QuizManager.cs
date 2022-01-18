@@ -46,9 +46,7 @@ public class QuizManager : MonoBehaviour
         gameStatus = GameStatus.PLAYING;
     }
 
-    /// <summary>
     /// Method used to randomly select the question form questions data
-    /// </summary>
     private void SelectQuestion()
     {
         //get the random number
@@ -72,7 +70,7 @@ public class QuizManager : MonoBehaviour
 
     void SetTime(float value)
     {
-        TimeSpan time = TimeSpan.FromSeconds(currentTime);                       //set the time value
+        TimeSpan time = TimeSpan.FromSeconds(currentTime);       //set the time value
         quizGameUI.TimerText.text = time.ToString("mm':'ss");   //convert time to Time format
 
         if (currentTime <= 0)
@@ -82,19 +80,14 @@ public class QuizManager : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Method called to check the answer is correct or not
-    /// </summary>
-    /// <param name="selectedOption">answer string</param>
-    /// <returns></returns>
+    /// Method called to check if the answer is correct or not
     public bool Answer(string selectedOption)
     {
-        //set default to false
         bool correct = false;
         //if selected answer is similar to the correctAns
         if (selectedQuetion.correctAns == selectedOption)
         {
-            //Yes, Ans is correct
+            //Ans is correct
             correctAnswerCount++;
             correct = true;
             gameScore += 50;
@@ -102,7 +95,7 @@ public class QuizManager : MonoBehaviour
         }
         else
         {
-            //No, Ans is wrong
+            //Ans is wrong
             //Reduce Life
             lifesRemaining--;
             quizGameUI.ReduceLife(lifesRemaining);
@@ -125,7 +118,6 @@ public class QuizManager : MonoBehaviour
                 GameEnd();
             }
         }
-        //return the value of correct bool
         return correct;
     }
 
@@ -133,9 +125,6 @@ public class QuizManager : MonoBehaviour
     {
         gameStatus = GameStatus.NEXT;
         quizGameUI.GameOverPanel.SetActive(true);
-
-        //fi you want to save only the highest score then compare the current score with saved score and if more save the new score
-        //eg:- if correctAnswerCount > PlayerPrefs.GetInt(currentCategory) then call below line
 
         //Save the score
         PlayerPrefs.SetInt(currentCategory, correctAnswerCount); //save the score for this category
