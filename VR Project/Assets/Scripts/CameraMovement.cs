@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Movement of the player with the Character controller
 public class CameraMovement : MonoBehaviour
 {
     public float mouseSensitivity = 100f;

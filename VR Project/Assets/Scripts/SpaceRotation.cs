@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Movement of the player in the spaceship when the animation is finished
 public class SpaceRotation : MonoBehaviour
 {
     public float mouseSensitivity = 100f;

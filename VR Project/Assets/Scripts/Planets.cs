@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Rotation of each planets
 public class Planets : MonoBehaviour
 {
     public GameObject Mars;

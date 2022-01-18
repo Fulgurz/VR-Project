@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
+//Main Scene where the player choose the planet where he wants to travel
 public class SpaceShip : MonoBehaviour
 {
     public static string chosenPlanet;
@@ -28,7 +29,7 @@ public class SpaceShip : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 if (hit.transform.name == "Mercury" || hit.transform.name == "Venus" || hit.transform.name == "Moon"
-                    || hit.transform.name == "Earth" || hit.transform.name == "Mars" || hit.transform.name == "Jupiter"
+                    || hit.transform.name == "Mars" || hit.transform.name == "Jupiter"
                     || hit.transform.name == "Saturn" || hit.transform.name == "Uranus" || hit.transform.name == "Neptune")
                 {
                     Debug.Log("Travelling to the planet " + hit.transform.name);
@@ -37,7 +38,7 @@ public class SpaceShip : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("This isn't a Planet");
+                    //Debug.Log("This isn't a Planet");
 
                 }
             }

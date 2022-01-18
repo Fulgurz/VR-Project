@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
+//Scene of the gas planets which are instantiate + their informations
 public class SpaceInfo : MonoBehaviour
 {
     private Animator anim;
@@ -34,7 +35,8 @@ public class SpaceInfo : MonoBehaviour
                 currentPlanet = planets;
             }
         }
-        Debug.Log("Current planet: " + currentPlanet.name);
+        //Debug.Log("Current planet: " + currentPlanet.name);
+
         Instantiate(currentPlanet, planetPosition);
 
         arrivalText.text = "We can't land on "+chosenPlanet+" ,it's too dangerous";
@@ -76,7 +78,7 @@ public class SpaceInfo : MonoBehaviour
             {
                 if (hit.transform.name == "Jupiter")
                 {
-                    Debug.Log("It's Jupiter");
+                    //Debug.Log("It's Jupiter");
                 }
 
             }

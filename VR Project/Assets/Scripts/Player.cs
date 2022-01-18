@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+// Movement of the player with the direction keys and raycast to touch objects
 public class Player : MonoBehaviour
 {
     public CharacterController controller;
@@ -37,9 +38,9 @@ public class Player : MonoBehaviour
                     ReturnSpaceship.SetActive(true);
                     returnText.text = "Return to the spaceship ?";
                 }
-                else if (hit.transform.name == "Rock")
+                else if (hit.transform.name == "BoardInfo")
                 {
-                    Debug.Log("This is a rock");
+                    //Debug.Log("Get Info");
                     ReturnSpaceship.SetActive(false);
                     GroundInfoPanel.SetActive(true);
                 }
